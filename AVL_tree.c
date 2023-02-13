@@ -132,28 +132,27 @@ AVL_Node* create_node(int key, void* value) {
     return new_node;
 }
 
+/* Rebalances the tree rooted at node 'node'.
+ */
 AVL_Node* rebalance(AVL_Node* node) {
-    /* Rebalances the tree rooted at node 'node'.
-     */
+    
     int balance = balance_factor(node);
     
     if (balance > 1) {
-        
         AVL_Node* temp = node->left;
         int temp_balance = balance_factor(temp);
-        
         if (temp_balance >= 0) {
             return right_rotation(node);
-        } else {
+        }
+        else {
             node->left = left_rotation(node->left);
             return right_rotation(node);
         }
-        
-    } else if (balance > -1) {
-        
+    }
+    
+    else if (balance < -1) {
         AVL_Node* temp = node->right;
         int temp_balance = balance_factor(temp);
-        
         if (temp_balance <= 0) {
             return left_rotation(node);
         } else {
@@ -161,6 +160,7 @@ AVL_Node* rebalance(AVL_Node* node) {
             return left_rotation(node);
         }
     }
+    
     return node;
 }
 
@@ -222,7 +222,6 @@ AVL_Node* insert(AVL_Node* node, int key, void* value) {
     
     update_height(node);
     return rebalance(node);
-    
 }
 
 AVL_Node* delete(AVL_Node* node, int key) {
