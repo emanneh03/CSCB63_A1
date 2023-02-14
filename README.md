@@ -1,17 +1,28 @@
 # CSCB63_A1
 
 To run:
-  AVL_tree_tester sample_input.txt
+<html>
+<body>
+<p>AVL_tree_tester sample_input.txt</p>
+</body>
+</html>
+  
 or
-  AVL_tree_tester
 
-Testing rotations on insertions (insertion is automated, verify answer):
-left_rotate.txt
-right_rotate.txt
-left_right_rotate.txt
-right_left_rotate.txt
+<html>
+<body>
+<p>AVL_tree_tester</p>
+</body>
+</html>
+  
+<p>Testing rotations on insertions (insertion is automated, verify answer):</p>
+<p>left_rotate.txt</p>
+<p>right_rotate.txt</p>
+<p>left_right_rotate.txt</p>
+<p>right_left_rotate.txt</p>
 
-Testing rotations on deletions:
-delete_right_left_rotate.txt -> delete 21
-delete_left_right_rotate.txt -> delete 18
-delete_two_children.txt -> delete 11
+<p>Testing rotations on deletions:</p>
+<p>delete_right_left_rotate.txt -> delete 21</p>
+<p>delete_left_right_rotate.txt -> delete 18</p>
+<p>delete_two_children.txt -> delete 11</p>
+<p>left_rotate.txt</p>
